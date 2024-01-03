@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Paradise</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2ecc71;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 2em;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .plant {
+            border: 1px solid #ddd;
+            margin: 1em;
+            padding: 1em;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .plant:hover {
+            transform: scale(1.05);
+        }
+
+        .plant img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .plant h2 {
+            color: #2ecc71;
+            margin-top: 10px;
+        }
+
+        .plant p {
+            color: #555;
+        }
+
+        .plant button {
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .plant button:hover {
+            background-color: #27ae60;
+        }
+
+        footer {
+            background-color: #2ecc71;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Plant Paradise
+    </header>
+
+    <section>
+        <div class="plant">
+            <img src="plant1.jpg" alt="Succulent">
+            <h2>Succulent</h2>
+            <p>Beautiful succulent plant for your home.</p>
+            <p>Price: $20</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="plant">
+            <img src="plant2.jpg" alt="Fiddle Leaf Fig">
+            <h2>Fiddle Leaf Fig</h2>
+            <p>Large and elegant fiddle leaf fig tree.</p>
+            <p>Price: $50</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <!-- Add more plant entries as needed -->
+
+    </section>
+
+    <footer>
+        &copy; 2023 Plant Paradise
+    </footer>
+
+</body>
+</html>
