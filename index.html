@@ -84,24 +84,49 @@
     <div class="container" id="products">
         <h2>Our Products</h2>
         <div class="product">
-            <img src="crown1.jpg" alt="Crown Pack 1">
+            <img src="https://static.wikia.nocookie.net/strongholdkingdoms_gamepedia_en/images/6/68/Buy_crowns.png/revision/latest?cb=20101101143255" alt="Crown Pack 1">
             <h2>Crown Pack 1</h2>
             <p>100 Crowns - $4.99</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Crown Pack 1', 4.99)">Add to Cart</button>
         </div>
         <div class="product">
-            <img src="crown2.jpg" alt="Crown Pack 2">
+            <img src="https://static.wikia.nocookie.net/strongholdkingdoms_gamepedia_en/images/6/68/Buy_crowns.png/revision/latest?cb=20101101143255" alt="Crown Pack 2">
             <h2>Crown Pack 2</h2>
             <p>500 Crowns - $19.99</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Crown Pack 2', 19.99)">Add to Cart</button>
         </div>
         <div class="product">
-            <img src="crown3.jpg" alt="Crown Pack 3">
+            <img src="https://static.wikia.nocookie.net/strongholdkingdoms_gamepedia_en/images/6/68/Buy_crowns.png/revision/latest?cb=20101101143255" alt="Crown Pack 3">
             <h2>Crown Pack 3</h2>
             <p>1000 Crowns - $34.99</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Crown Pack 3', 34.99)">Add to Cart</button>
         </div>
     </div>
+    <footer>
+        <p>&copy; 2024 Stronghold Kingdoms Crowns Shop. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cart = [];
+
+        function addToCart(productName, productPrice) {
+            cart.push({ name: productName, price: productPrice });
+            alert(`${productName} has been added to your cart.`);
+            updateCart();
+        }
+
+        function updateCart() {
+            let cartContents = "Your Cart:\n";
+            cart.forEach((item, index) => {
+                cartContents += `${index + 1}. ${item.name} - $${item.price.toFixed(2)}\n`;
+            });
+            cartContents += `\nTotal: $${cart.reduce((total, item) => total + item.price, 0).toFixed(2)}`;
+            console.log(cartContents);
+        }
+    </script>
+</body>
+</html>
+
     <footer>
         <p>&copy; 2024 Stronghold Kingdoms Crowns Shop. All rights reserved.</p>
     </footer>
