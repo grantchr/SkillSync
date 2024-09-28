@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Skill Share - A centralized platform for companies to submit and employees to access equipment-specific training.">
-    <title>Skill Share</title>
+    <meta name="description" content="SkillSync - A centralized platform for companies to submit and employees to access equipment-specific training.">
+    <title>SkillSync</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
         /* General Styling */
@@ -46,34 +46,20 @@
             padding: 20px 0;
         }
 
-        .nav-container {
-            display: flex;
-            justify-content: center; /* Center align the bubbles */
-            margin-bottom: 20px; /* Space between bubbles and other nav items */
-        }
-
-        .nav-bubble {
-            background-color: #E6FD53; /* Lemon Zest */
-            border-radius: 15px; /* Rounded corners */
-            padding: 20px; /* Space inside the bubble */
-            margin: 0 15px; /* Space between bubbles */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-            transition: transform 0.3s, background-color 0.3s; /* Animation effects */
-        }
-
-        .nav-bubble:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            background-color: #204F56; /* Ocean Teal on hover */
-        }
-
-        .nav-bubble h3 {
-            margin: 0;
-            font-size: 1.2em;
+        .nav-section {
+            margin-bottom: 20px; /* Space between nav items */
         }
 
         nav a {
-            color: #1B263F; /* Keep Navy for text */
+            color: #E6FD53; /* Lemon Zest for text */
             text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #204F56; /* Ocean Teal on hover */
         }
 
         /* Sections */
@@ -90,33 +76,13 @@
             color: #204F56; /* Ocean Teal */
             font-size: 2em;
             margin-bottom: 20px;
-            position: relative; /* For bubble effect */
         }
 
-        section h2::before,
-        section h2::after {
-            content: '';
-            position: absolute;
-            background-color: #E6FD53; /* Lemon Zest */
-            border-radius: 50px; /* Rounded bubbles */
-            height: 100%; /* Full height */
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1; /* Behind the text */
-            filter: blur(20px); /* Blur effect */
-        }
-
-        /* Paragraphs */
         section p {
             color: #333; /* Dark Gray */
             font-size: 1.2em;
             max-width: 800px;
             margin: 0 auto 30px;
-            padding: 10px 20px; /* Add padding for bubble effect */
-            background-color: #E6FD53; /* Lemon Zest */
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
         /* CTA Button */
@@ -237,37 +203,31 @@
 
 <body>
     <header>
-        <h1>Skill Share</h1>
+        <h1>SkillSync</h1>
         <p>Your one-stop platform for industrial equipment training</p>
     </header>
 
     <nav>
-        <div class="nav-container">
-            <div class="nav-bubble">
-                <h3><a href="#home">Home</a></h3>
-            </div>
-            <div class="nav-bubble">
-                <h3><a href="#about">About Us</a></h3>
-            </div>
-            <div class="nav-bubble">
-                <h3><a href="#trainings">Trainings</a></h3>
-            </div>
-        </div>
         <div class="nav-section">
+            <h3><a href="#home">Home</a></h3>
+            <h3><a href="#about">About Us</a></h3>
+            <h3><a href="#trainings">Trainings</a></h3>
+            <h3><a href="#services">Our Services</a></h3>
+            <h3><a href="#industries">Industries We Serve</a></h3>
             <h3><a href="#submit">Submit Training</a></h3>
             <h3><a href="#contact">Contact</a></h3>
         </div>
     </nav>
 
     <section id="home">
-        <h2>Welcome to Skill Share</h2>
+        <h2>Welcome to SkillSync</h2>
         <p>Empower your workforce with the latest and most accurate training for your industrial equipment. Browse our library of specialized training modules for various manufacturing processes and machines.</p>
         <button class="cta-button">Browse Trainings</button>
     </section>
 
     <section id="about">
         <h2>About Us</h2>
-        <p>Skill Share is a centralized platform where companies submit their specialized equipment training. We provide the latest and most accurate resources to train your workforce efficiently and safely on the machinery that drives your business.</p>
+        <p>SkillSync is a centralized platform where companies submit their specialized equipment training. We provide the latest and most accurate resources to train your workforce efficiently and safely on the machinery that drives your business.</p>
     </section>
 
     <section id="trainings">
@@ -289,6 +249,16 @@
                 <button class="cta-button">Purchase</button>
             </div>
         </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer tailored training solutions, online courses, and certifications to meet the specific needs of your workforce. Our expert instructors are industry veterans with hands-on experience.</p>
+    </section>
+
+    <section id="industries">
+        <h2>Industries We Serve</h2>
+        <p>From manufacturing to logistics, we cater to various industries including automotive, aerospace, and construction. Our training programs are designed to meet the unique demands of each sector.</p>
     </section>
 
     <section id="submit">
@@ -318,15 +288,13 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <p>If you have any questions or need help, feel free to reach out!</p>
-        <p>Email: support@skillshare.com</p>
+        <p>Email: support@skillsync.com</p>
         <p>Phone: 1-800-555-TRAIN</p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Skill Share. All rights reserved.</p>
+        <p>&copy; 2024 SkillSync. All rights reserved.</p>
     </footer>
 </body>
 
 </html>
-
-
