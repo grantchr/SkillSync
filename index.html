@@ -102,6 +102,14 @@
         }
 
         /* Cards for Popular Trainings */
+        .card-container {
+            display: flex;
+            justify-content: space-between; /* Align cards horizontally */
+            padding: 20px;
+            gap: 20px; /* Space between cards */
+            flex-wrap: wrap; /* Allow cards to wrap if screen is narrow */
+        }
+
         .card {
             background-color: white; /* White background for cards */
             border-radius: 10px;
@@ -109,7 +117,6 @@
             width: 300px; /* Fixed width for training cards */
             padding: 20px;
             text-align: left;
-            margin: 20px; /* Space around cards */
         }
 
         .card h3 {
@@ -236,7 +243,7 @@
 
     <section id="trainings">
         <h2>Popular Trainings</h2>
-        <div class="container">
+        <div class="card-container">
             <div class="card">
                 <h3>Forklift Operator Safety</h3>
                 <p>Learn the essential skills and safety protocols to operate a forklift efficiently and safely.</p>
@@ -292,3 +299,4 @@
 </body>
 
 </html>
+
