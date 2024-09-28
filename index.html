@@ -1,69 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stronghold Kingdoms Crowns Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Manufacturing Training Hub - A centralized platform for companies to submit and employees to access equipment-specific training.">
+    <title>Manufacturing Training Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cta-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .submit-button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <h1>Stronghold Kingdoms Crowns Shop</h1>
+        <h1>Manufacturing Training Hub</h1>
+        <p>Your one-stop platform for industrial equipment training</p>
     </header>
+
     <nav>
         <a href="#home">Home</a>
-        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#trainings">Trainings</a>
+        <a href="#submit">Submit Training</a>
         <a href="#contact">Contact</a>
     </nav>
-    <div class="container" id="home">
-        <h2>Welcome to the Stronghold Kingdoms Crowns Shop</h2>
-        <p>Get your crowns here to enhance your gaming experience in Stronghold Kingdoms!</p>
-    </div>
-    <div class="container" id="products">
-        <h2>Our Products</h2>
-        <div class="product">
-            <img src="crown1.jpg" alt="Crown Pack 1">
-            <h2>Crown Pack 1</h2>
-            <p>100 Crowns - $4.99</p>
-            <button onclick="addToCart('Crown Pack 1', 4.99)">Add to Cart</button>
+
+    <section id="home">
+        <h2>Welcome to Manufacturing Training Hub</h2>
+        <p>Empower your workforce with the latest and most accurate training for your industrial equipment. Browse our library of specialized training modules for various manufacturing processes and machines.</p>
+        <button class="cta-button">Browse Trainings</button>
+    </section>
+
+    <section id="trainings">
+        <h2>Popular Trainings</h2>
+        <div class="container">
+            <div class="card">
+                <h3>Forklift Operator Safety</h3>
+                <p>Learn the essential skills and safety protocols to operate a forklift efficiently and safely.</p>
+                <button class="cta-button">Purchase</button>
+            </div>
+            <div class="card">
+                <h3>CNC Machine Operation</h3>
+                <p>Master the controls and operational procedures of CNC machines for precision manufacturing.</p>
+                <button class="cta-button">Purchase</button>
+            </div>
+            <div class="card">
+                <h3>3D Printing for Manufacturing</h3>
+                <p>An advanced guide to integrating 3D printing into your manufacturing workflow.</p>
+                <button class="cta-button">Purchase</button>
+            </div>
         </div>
-        <div class="product">
-            <img src="crown2.jpg" alt="Crown Pack 2">
-            <h2>Crown Pack 2</h2>
-            <p>500 Crowns - $19.99</p>
-            <button onclick="addToCart('Crown Pack 2', 19.99)">Add to Cart</button>
+    </section>
+
+    <section id="submit">
+        <h2>Submit Your Training</h2>
+        <div class="form-container">
+            <form>
+                <label for="company">Company Name:</label>
+                <input type="text" id="company" name="company" placeholder="Enter your company name" required>
+
+                <label for="training-name">Training Name:</label>
+                <input type="text" id="training-name" name="training-name" placeholder="Enter training title" required>
+
+                <label for="description">Training Description:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Brief description of the training" required></textarea>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" placeholder="Enter the training price" required>
+
+                <label for="upload">Upload Training Content:</label>
+                <input type="file" id="upload" name="upload" required>
+
+                <button type="submit" class="submit-button">Submit Training</button>
+            </form>
         </div>
-        <div class="product">
-            <img src="crown3.jpg" alt="Crown Pack 3">
-            <h2>Crown Pack 3</h2>
-            <p>1000 Crowns - $34.99</p>
-            <button onclick="addToCart('Crown Pack 3', 34.99)">Add to Cart</button>
-        </div>
-    </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Manufacturing Training Hub is a centralized platform where companies submit their specialized equipment training. We provide the latest and most accurate resources to train your workforce efficiently and safely on the machinery that drives your business.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need help, feel free to reach out!</p>
+        <p>Email: support@manuhub.com</p>
+        <p>Phone: 1-800-555-TRAIN</p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Stronghold Kingdoms Crowns Shop. All rights reserved.</p>
+        <p>&copy; 2024 Manufacturing Training Hub. All rights reserved.</p>
     </footer>
 
-    <script>
-        let cart = [];
-
-        function addToCart(productName, productPrice) {
-            cart.push({ name: productName, price: productPrice });
-            alert(`${productName} has been added to your cart.`);
-            updateCart();
-        }
-
-        function updateCart() {
-            let cartContents = "Your Cart:\n";
-            cart.forEach((item, index) => {
-                cartContents += `${index + 1}. ${item.name} - $${item.price.toFixed(2)}\n`;
-            });
-            cartContents += `\nTotal: $${cart.reduce((total, item) => total + item.price, 0).toFixed(2)}`;
-            console.log(cartContents);
-        }
-    </script>
 </body>
-</html>
 
-</body>
 </html>
