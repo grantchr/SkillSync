@@ -2,15 +2,15 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    background-color: #f0f2f5;
-    color: #333;
+    background-color: #FEFFFD; /* Ivory Whisper */
+    color: #1B263F; /* Keep Navy */
     line-height: 1.6;
 }
 
 /* Header Styling */
 header {
-    background-color: #4c007f;
-    color: white;
+    background-color: #204F56; /* Ocean teal */
+    color: #E6FD53; /* Lemon zest */
     padding: 20px 0;
     text-align: center;
 }
@@ -26,13 +26,13 @@ header p {
 
 /* Navigation Bar */
 nav {
-    background-color: #333;
+    background-color: #1B263F; /* Keep Navy */
     text-align: center;
     padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: #E6FD53; /* Lemon zest */
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.1em;
@@ -40,24 +40,24 @@ nav a {
 }
 
 nav a:hover {
-    color: #f0e130;
+    color: #204F56; /* Ocean teal */
 }
 
 /* Sections */
 section {
     padding: 40px;
-    background-color: #fff;
+    background-color: #fff; /* White background for sections */
     text-align: center;
 }
 
 section h2 {
-    color: #4c007f;
+    color: #204F56; /* Ocean teal */
     font-size: 2em;
     margin-bottom: 20px;
 }
 
 section p {
-    color: #333;
+    color: #1B263F; /* Keep Navy */
     font-size: 1.2em;
     max-width: 800px;
     margin: 0 auto 30px;
@@ -65,8 +65,8 @@ section p {
 
 /* CTA Button */
 .cta-button {
-    background-color: #6a1b9a;
-    color: white;
+    background-color: #E6FD53; /* Lemon zest */
+    color: #1B263F; /* Keep Navy */
     padding: 12px 25px;
     border: none;
     border-radius: 5px;
@@ -76,7 +76,7 @@ section p {
 }
 
 .cta-button:hover {
-    background-color: #4c007f;
+    background-color: #204F56; /* Ocean teal */
 }
 
 /* Cards */
@@ -97,16 +97,16 @@ section p {
 }
 
 .card h3 {
-    color: #4c007f;
+    color: #204F56; /* Ocean teal */
     font-size: 1.4em;
 }
 
 .card p {
-    color: #555;
+    color: #555; /* Darker gray for card text */
 }
 
 .card button {
-    background-color: #007bff;
+    background-color: #007bff; /* Default button color */
     color: white;
     padding: 10px 15px;
     border: none;
@@ -118,12 +118,12 @@ section p {
 }
 
 .card button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
 /* Form */
 .form-container {
-    background-color: #f7f7f7;
+    background-color: #9EB8F9; /* Sky Mist */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -142,12 +142,12 @@ input, textarea, label {
 }
 
 input:focus, textarea:focus {
-    border-color: #4c007f;
+    border-color: #204F56; /* Ocean teal */
     outline: none;
 }
 
 .submit-button {
-    background-color: #28a745;
+    background-color: #28a745; /* Green */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -157,12 +157,12 @@ input:focus, textarea:focus {
 }
 
 .submit-button:hover {
-    background-color: #218838;
+    background-color: #218838; /* Darker green */
 }
 
 /* Footer */
 footer {
-    background-color: #4c007f;
+    background-color: #1B263F; /* Keep Navy */
     color: white;
     padding: 20px;
     text-align: center;
