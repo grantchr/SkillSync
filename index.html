@@ -98,6 +98,24 @@
             transform: scale(1.05); /* Slightly enlarge on hover */
         }
 
+        /* Affiliates Section */
+        .affiliates {
+            display: flex;
+            justify-content: space-between; /* Space out affiliates */
+            margin: 20px 0; /* Space above and below */
+        }
+
+        .affiliate {
+            background-color: #E6FD53; /* Lemon Zest */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
+            flex: 1; /* Allow flex growth */
+            margin: 0 10px; /* Space between affiliates */
+            text-align: center; /* Center text */
+            min-height: 150px; /* Minimum height for consistency */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
         /* CTA Button */
         .cta-button {
             background-color: #E6FD53; /* Lemon Zest */
@@ -220,7 +238,7 @@
         <h1>SkillSync</h1>
         <nav>
             <div class="nav-section">
-                <h3><a href="#home">Home</a></h3>
+                <h3><a href="#account">My Account</a></h3>
                 <h3><a href="#about">About Us</a></h3>
                 <h3><a href="#trainings">Trainings</a></h3>
                 <h3><a href="#services">Our Services</a></h3>
@@ -231,28 +249,41 @@
         </nav>
     </header>
 
-    <section id="home">
+    <section id="account">
         <h2>Welcome to SkillSync</h2>
-        <p>Empower your workforce with the latest and most accurate training for your industrial equipment. Browse our library of specialized training modules for various manufacturing processes and machines.</p>
-        <button class="cta-button">Browse Trainings</button>
+        <p>Manage your account and access your training modules here.</p>
+        <button class="cta-button">Go to My Account</button>
     </section>
 
-    <div class="section-container">
-        <section id="about" class="bubble">
-            <h2>About Us</h2>
-            <p>SkillSync is a centralized platform where companies submit their specialized equipment training. We provide the latest and most accurate resources to train your workforce efficiently and safely on the machinery that drives your business.</p>
-        </section>
-
-        <section id="services" class="bubble">
-            <h2>Our Services</h2>
-            <p>We offer tailored training solutions, online courses, and certifications to meet the specific needs of your workforce. Our expert instructors are industry veterans with hands-on experience.</p>
-        </section>
-
-        <section id="industries" class="bubble">
-            <h2>Industries We Serve</h2>
-            <p>From manufacturing to logistics, we cater to various industries including automotive, aerospace, and construction. Our programs are designed to meet industry standards and ensure compliance.</p>
-        </section>
+    <div class="affiliates">
+        <div class="affiliate">
+            <h3>Affiliates</h3>
+            <p>Placeholder for affiliate logo or information.</p>
+        </div>
+        <div class="affiliate">
+            <h3>Affiliates</h3>
+            <p>Placeholder for affiliate logo or information.</p>
+        </div>
+        <div class="affiliate">
+            <h3>Affiliates</h3>
+            <p>Placeholder for affiliate logo or information.</p>
+        </div>
     </div>
+
+    <section id="about" class="bubble">
+        <h2>About Us</h2>
+        <p>SkillSync is a centralized platform where companies submit their specialized equipment training. Our programs are designed to meet industry standards and ensure compliance.</p>
+    </section>
+
+    <section id="services" class="bubble">
+        <h2>Our Services</h2>
+        <p>We offer a variety of training programs tailored to the needs of the manufacturing industry, ensuring your workforce is well-prepared.</p>
+    </section>
+
+    <section id="industries" class="bubble">
+        <h2>Industries We Serve</h2>
+        <p>We provide training solutions for a wide range of industries, ensuring all workers are equipped with the necessary skills.</p>
+    </section>
 
     <section id="trainings">
         <h2>Popular Trainings</h2>
@@ -312,5 +343,3 @@
 </body>
 
 </html>
-
-
