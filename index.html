@@ -56,24 +56,32 @@
 
         /* Sections */
         section {
-            padding: 40px;
+            padding: 20px;
             background-color: #fff; /* White background for sections */
             text-align: center;
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-            margin: 20px 0; /* Spacing between sections */
+            margin: 20px; /* Space around sections */
+            flex: 1; /* Allow sections to grow */
+        }
+
+        /* Layout for sections */
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Evenly space the sections */
         }
 
         section h2 {
             color: #204F56; /* Ocean Teal */
-            font-size: 2em;
+            font-size: 1.8em; /* Slightly smaller for consistency */
             margin-bottom: 20px;
         }
 
         section p {
             color: #333; /* Dark Gray */
             font-size: 1.2em;
-            max-width: 800px;
+            max-width: 300px; /* Limit paragraph width */
             margin: 0 auto 30px;
         }
 
@@ -93,21 +101,15 @@
             background-color: #204F56; /* Ocean Teal */
         }
 
-        /* Cards */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
+        /* Cards for Popular Trainings */
         .card {
             background-color: white; /* White background for cards */
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 300px; /* Fixed width for training cards */
             padding: 20px;
             text-align: left;
+            margin: 20px; /* Space around cards */
         }
 
         .card h3 {
@@ -215,10 +217,22 @@
         <button class="cta-button">Browse Trainings</button>
     </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>SkillSync is a centralized platform where companies submit their specialized equipment training. We provide the latest and most accurate resources to train your workforce efficiently and safely on the machinery that drives your business.</p>
-    </section>
+    <div class="section-container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>SkillSync is a centralized platform where companies submit their specialized equipment training. We provide the latest and most accurate resources to train your workforce efficiently and safely on the machinery that drives your business.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer tailored training solutions, online courses, and certifications to meet the specific needs of your workforce. Our expert instructors are industry veterans with hands-on experience.</p>
+        </section>
+
+        <section id="industries">
+            <h2>Industries We Serve</h2>
+            <p>From manufacturing to logistics, we cater to various industries including automotive, aerospace, and construction. Our training programs are designed to meet the unique demands of each sector.</p>
+        </section>
+    </div>
 
     <section id="trainings">
         <h2>Popular Trainings</h2>
@@ -239,16 +253,6 @@
                 <button class="cta-button">Purchase</button>
             </div>
         </div>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>We offer tailored training solutions, online courses, and certifications to meet the specific needs of your workforce. Our expert instructors are industry veterans with hands-on experience.</p>
-    </section>
-
-    <section id="industries">
-        <h2>Industries We Serve</h2>
-        <p>From manufacturing to logistics, we cater to various industries including automotive, aerospace, and construction. Our training programs are designed to meet the unique demands of each sector.</p>
     </section>
 
     <section id="submit">
