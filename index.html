@@ -4,326 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SkillSync - A centralized platform for companies to submit and employees to access equipment-specific training.">
-    <title>SkillSync</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>SkillSync - One Stop Shop for Employee Training in Manufacturing</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* General Styling */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #FEFFFD; /* Ivory Whisper */
-            color: #1B263F; /* Keep Navy */
-            line-height: 1.6;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        /* Header Styling */
         header {
-            display: flex;
-            align-items: center; /* Center items vertically */
-            padding: 20px 0;
-            background-color: #204F56; /* Ocean Teal */
-            color: #E6FD53; /* Lemon Zest */
-            border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
         }
 
-        header h1 {
-            font-family: 'Montserrat', sans-serif; /* Stylish font */
-            margin: 0;
-            font-size: 3em; /* Larger font size */
-            text-transform: uppercase; /* Modern touch */
-            letter-spacing: 1px; /* Spacing for a cleaner look */
-            flex: 1; /* Allow heading to take full width */
-            text-align: left; /* Align text to the left */
-        }
-
-        .nav-section {
-            display: flex;
-            gap: 20px; /* Space between nav items */
-            margin-left: auto; /* Push nav to the right */
+        nav {
+            margin: 20px 0;
         }
 
         nav a {
-            color: #E6FD53; /* Lemon Zest for text */
+            color: #fff;
+            margin: 0 15px;
             text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: #204F56; /* Ocean Teal on hover */
-        }
-
-        /* Sections */
-        section {
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
             padding: 20px;
-            background-color: #fff; /* White background for sections */
-            text-align: center;
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-            margin: 20px; /* Space around sections */
-            flex: 1; /* Allow sections to grow */
         }
 
-        /* Layout for sections */
-        .section-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between; /* Evenly space the sections */
+        h1, h2 {
+            color: #333;
         }
 
-        section h2 {
-            color: #204F56; /* Ocean Teal */
-            font-size: 1.8em; /* Slightly smaller for consistency */
-            margin-bottom: 20px;
-        }
-
-        section p {
-            color: #333; /* Dark Gray */
-            font-size: 1.2em;
-            max-width: 300px; /* Limit paragraph width */
-            margin: 0 auto 30px;
-        }
-
-        /* Affiliates Section */
-        .affiliates {
-            display: flex;
-            justify-content: space-between; /* Space out affiliates */
-            margin: 20px 0; /* Space above and below */
-        }
-
-        .affiliate {
-            flex: 1; /* Allow flex growth */
-            text-align: center; /* Center text */
-            margin: 0 10px; /* Space between affiliates */
-        }
-
-        .affiliate h3 {
-            margin: 0; /* Remove default margin */
-            font-size: 1.5em; /* Size for the affiliate title */
-            color: #204F56; /* Ocean Teal */
-        }
-
-        /* CTA Button */
-        .cta-button {
-            background-color: #E6FD53; /* Lemon Zest */
-            color: #1B263F; /* Keep Navy */
-            padding: 12px 25px;
-            border: none;
-            border-radius: 20px; /* More rounded button */
-            cursor: pointer;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #204F56; /* Ocean Teal */
-        }
-
-        /* Cards for Popular Trainings */
-        .card-container {
-            display: flex;
-            justify-content: space-between; /* Align cards horizontally */
+        .services, .about, .testimonials, .contact {
+            background: #fff;
             padding: 20px;
-            gap: 20px; /* Space between cards */
-            flex-wrap: wrap; /* Allow cards to wrap if screen is narrow */
-        }
-
-        .card {
-            background-color: white; /* White background for cards */
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            width: 300px; /* Fixed width for training cards */
-            padding: 20px;
-            text-align: left;
-        }
-
-        .card h3 {
-            color: #204F56; /* Ocean Teal */
-            font-size: 1.4em;
-            margin-bottom: 10px; /* Spacing below card titles */
-        }
-
-        .card p {
-            color: #555; /* Darker gray for card text */
-        }
-
-        .card button {
-            background-color: #007bff; /* Default button color */
-            color: white;
-            padding: 10px 15px;
-            border: none;
+            margin: 20px 0;
             border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background-color 0.3s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .card button:hover {
-            background-color: #0056b3; /* Darker shade on hover */
-        }
-
-        /* Form */
-        .form-container {
-            background-color: #9EB8F9; /* Sky Mist */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 20px auto;
-        }
-
-        input,
-        textarea,
-        label {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        input:focus,
-        textarea:focus {
-            border-color: #204F56; /* Ocean Teal */
-            outline: none;
-        }
-
-        .submit-button {
-            background-color: #28a745; /* Green */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-
-        .submit-button:hover {
-            background-color: #218838; /* Darker green */
-        }
-
-        /* Footer */
         footer {
-            background-color: #1B263F; /* Keep Navy */
-            color: white;
-            padding: 20px;
             text-align: center;
-            margin-top: 40px;
-        }
-
-        footer p {
-            margin: 0;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
+
     <header>
         <h1>SkillSync</h1>
         <nav>
-            <div class="nav-section">
-                <h3><a href="#account">My Account</a></h3>
-                <h3><a href="#about">About Us</a></h3>
-                <h3><a href="#trainings">Trainings</a></h3>
-                <h3><a href="#services">Our Services</a></h3>
-                <h3><a href="#industries">Industries We Serve</a></h3>
-                <h3><a href="#submit">Submit Training</a></h3>
-                <h3><a href="#contact">Contact</a></h3>
-            </div>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <div class="affiliates">
-        <div class="affiliate">
-            <h3>Affiliates</h3>
-            <p>Placeholder for affiliate logo or information.</p>
-        </div>
-        <section id="account">
-            <h2>Welcome to SkillSync</h2>
-            <p>Manage your account and access your training modules here.</p>
-            <button class="cta-button">Go to My Account</button>
+    <div class="container">
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>On-site Training Programs</li>
+                <li>Online Workshops</li>
+                <li>Certification Courses</li>
+                <li>Safety Training</li>
+                <li>Skill Assessments</li>
+            </ul>
         </section>
-        <div class="affiliate">
-            <h3>Affiliates</h3>
-            <p>Placeholder for affiliate logo or information.</p>
-        </div>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>SkillSync is your one-stop shop for all training needs in the manufacturing sector. Our mission is to empower employees with the skills necessary to thrive in a dynamic work environment. With years of experience and a team of expert trainers, we offer comprehensive training solutions tailored to your organization’s specific needs.</p>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <h2>Testimonials</h2>
+            <blockquote>
+                <p>"SkillSync transformed our workforce! The training programs were engaging and effective."</p>
+                <cite>- Jane Doe, Operations Manager</cite>
+            </blockquote>
+            <blockquote>
+                <p>"The online workshops were incredibly convenient and very informative!"</p>
+                <cite>- John Smith, Plant Supervisor</cite>
+            </blockquote>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to learn more about our training programs, please reach out!</p>
+            <p>Email: <a href="mailto:info@skillsync.com">info@skillsync.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        </section>
     </div>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>SkillSync is a centralized platform where companies submit their specialized equipment training. Our programs are designed to meet industry standards and ensure compliance.</p>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>We offer a variety of training programs tailored to the needs of the manufacturing industry, ensuring your workforce is well-prepared.</p>
-    </section>
-
-    <section id="industries">
-        <h2>Industries We Serve</h2>
-        <p>We provide training solutions for a wide range of industries, ensuring all workers are equipped with the necessary skills.</p>
-    </section>
-
-    <section id="trainings">
-        <h2>Popular Trainings</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Forklift Operator Safety</h3>
-                <p>Learn the essential skills and safety protocols to operate a forklift efficiently and safely.</p>
-                <button class="cta-button">Purchase</button>
-            </div>
-            <div class="card">
-                <h3>CNC Machine Operation</h3>
-                <p>Master the controls and operational procedures of CNC machines for precision manufacturing.</p>
-                <button class="cta-button">Purchase</button>
-            </div>
-            <div class="card">
-                <h3>3D Printing for Manufacturing</h3>
-                <p>An advanced guide to integrating 3D printing into your manufacturing workflow.</p>
-                <button class="cta-button">Purchase</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="submit">
-        <h2>Submit Your Training</h2>
-        <div class="form-container">
-            <form>
-                <label for="company">Company Name:</label>
-                <input type="text" id="company" name="company" placeholder="Enter your company name" required>
-
-                <label for="training-name">Training Name:</label>
-                <input type="text" id="training-name" name="training-name" placeholder="Enter training title" required>
-
-                <label for="description">Training Description:</label>
-                <textarea id="description" name="description" rows="4" placeholder="Brief description of the training" required></textarea>
-
-                <label for="price">Price:</label>
-                <input type="number" id="price" name="price" placeholder="Enter the training price" required>
-
-                <label for="upload">Upload Training Content:</label>
-                <input type="file" id="upload" name="upload" required>
-
-                <button type="submit" class="submit-button">Submit Training</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or need help, feel free to reach out!</p>
-        <p>Email: support@skillsync.com</p>
-        <p>Phone: 1-800-555-TRAIN</p>
-    </section>
 
     <footer>
         <p>&copy; 2024 SkillSync. All rights reserved.</p>
     </footer>
+
 </body>
 
 </html>
+
 
