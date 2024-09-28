@@ -85,19 +85,6 @@
             margin: 0 auto 30px;
         }
 
-        /* Bubbles for sections */
-        .bubble {
-            background-color: #E6FD53; /* Lemon Zest */
-            border-radius: 20px; /* Rounded bubbles */
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-            transition: transform 0.3s; /* Smooth transition */
-        }
-
-        .bubble:hover {
-            transform: scale(1.05); /* Slightly enlarge on hover */
-        }
-
         /* Affiliates Section */
         .affiliates {
             display: flex;
@@ -106,14 +93,15 @@
         }
 
         .affiliate {
-            background-color: #E6FD53; /* Lemon Zest */
-            border-radius: 10px; /* Rounded corners */
-            padding: 20px;
             flex: 1; /* Allow flex growth */
-            margin: 0 10px; /* Space between affiliates */
             text-align: center; /* Center text */
-            min-height: 150px; /* Minimum height for consistency */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 10px; /* Space between affiliates */
+        }
+
+        .affiliate h3 {
+            margin: 0; /* Remove default margin */
+            font-size: 1.5em; /* Size for the affiliate title */
+            color: #204F56; /* Ocean Teal */
         }
 
         /* CTA Button */
@@ -249,38 +237,33 @@
         </nav>
     </header>
 
-    <section id="account">
-        <h2>Welcome to SkillSync</h2>
-        <p>Manage your account and access your training modules here.</p>
-        <button class="cta-button">Go to My Account</button>
-    </section>
-
     <div class="affiliates">
         <div class="affiliate">
             <h3>Affiliates</h3>
             <p>Placeholder for affiliate logo or information.</p>
         </div>
-        <div class="affiliate">
-            <h3>Affiliates</h3>
-            <p>Placeholder for affiliate logo or information.</p>
-        </div>
+        <section id="account">
+            <h2>Welcome to SkillSync</h2>
+            <p>Manage your account and access your training modules here.</p>
+            <button class="cta-button">Go to My Account</button>
+        </section>
         <div class="affiliate">
             <h3>Affiliates</h3>
             <p>Placeholder for affiliate logo or information.</p>
         </div>
     </div>
 
-    <section id="about" class="bubble">
+    <section id="about">
         <h2>About Us</h2>
         <p>SkillSync is a centralized platform where companies submit their specialized equipment training. Our programs are designed to meet industry standards and ensure compliance.</p>
     </section>
 
-    <section id="services" class="bubble">
+    <section id="services">
         <h2>Our Services</h2>
         <p>We offer a variety of training programs tailored to the needs of the manufacturing industry, ensuring your workforce is well-prepared.</p>
     </section>
 
-    <section id="industries" class="bubble">
+    <section id="industries">
         <h2>Industries We Serve</h2>
         <p>We provide training solutions for a wide range of industries, ensuring all workers are equipped with the necessary skills.</p>
     </section>
@@ -343,3 +326,4 @@
 </body>
 
 </html>
+
