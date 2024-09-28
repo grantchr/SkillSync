@@ -9,8 +9,8 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #204F56; /* Ocean teal */
-    color: #E6FD53; /* Lemon zest */
+    background-color: #204F56; /* Ocean Teal */
+    color: #E6FD53; /* Lemon Zest */
     padding: 20px 0;
     text-align: center;
 }
@@ -32,7 +32,7 @@ nav {
 }
 
 nav a {
-    color: #E6FD53; /* Lemon zest */
+    color: #E6FD53; /* Lemon Zest */
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.1em;
@@ -40,7 +40,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #204F56; /* Ocean teal */
+    color: #204F56; /* Ocean Teal */
 }
 
 /* Sections */
@@ -51,13 +51,13 @@ section {
 }
 
 section h2 {
-    color: #204F56; /* Ocean teal */
+    color: #204F56; /* Ocean Teal */
     font-size: 2em;
     margin-bottom: 20px;
 }
 
 section p {
-    color: #1B263F; /* Keep Navy */
+    color: #333; /* Dark Gray */
     font-size: 1.2em;
     max-width: 800px;
     margin: 0 auto 30px;
@@ -65,7 +65,7 @@ section p {
 
 /* CTA Button */
 .cta-button {
-    background-color: #E6FD53; /* Lemon zest */
+    background-color: #E6FD53; /* Lemon Zest */
     color: #1B263F; /* Keep Navy */
     padding: 12px 25px;
     border: none;
@@ -76,7 +76,7 @@ section p {
 }
 
 .cta-button:hover {
-    background-color: #204F56; /* Ocean teal */
+    background-color: #204F56; /* Ocean Teal */
 }
 
 /* Cards */
@@ -88,7 +88,7 @@ section p {
 }
 
 .card {
-    background-color: white;
+    background-color: white; /* White background for cards */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     width: 300px;
@@ -97,7 +97,7 @@ section p {
 }
 
 .card h3 {
-    color: #204F56; /* Ocean teal */
+    color: #204F56; /* Ocean Teal */
     font-size: 1.4em;
 }
 
@@ -142,7 +142,7 @@ input, textarea, label {
 }
 
 input:focus, textarea:focus {
-    border-color: #204F56; /* Ocean teal */
+    border-color: #204F56; /* Ocean Teal */
     outline: none;
 }
 
