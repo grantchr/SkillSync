@@ -4,60 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillSync - One Stop Shop for Employee Training in Manufacturing</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>SkillSync - Elevate Your Workforce</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #eaeaea;
+            color: #333;
+            line-height: 1.6;
         }
 
         header {
-            background: #333;
+            background: #0056b3;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
 
         nav {
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         nav a {
             color: #fff;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?manufacturing') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin: 0;
         }
 
         .container {
             width: 80%;
             margin: auto;
-            overflow: hidden;
             padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2 {
-            color: #333;
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
         }
 
         .services, .about, .testimonials, .contact {
-            background: #fff;
-            padding: 20px;
             margin: 20px 0;
+            padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #f9f9f9;
+            transition: transform 0.3s;
+        }
+
+        .services:hover, .about:hover, .testimonials:hover, .contact:hover {
+            transform: scale(1.02);
+        }
+
+        .testimonial {
+            background: #f1f1f1;
+            padding: 10px;
+            border-left: 5px solid #0056b3;
+            margin: 10px 0;
         }
 
         footer {
             text-align: center;
-            padding: 10px 0;
-            background: #333;
+            padding: 20px 0;
+            background: #0056b3;
             color: #fff;
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
@@ -74,33 +132,37 @@
         </nav>
     </header>
 
+    <div class="hero">
+        <h2>Elevate Your Workforce</h2>
+    </div>
+
     <div class="container">
         <section id="services" class="services">
             <h2>Our Services</h2>
             <ul>
-                <li>On-site Training Programs</li>
-                <li>Online Workshops</li>
-                <li>Certification Courses</li>
-                <li>Safety Training</li>
-                <li>Skill Assessments</li>
+                <li>🔧 On-site Training Programs</li>
+                <li>💻 Online Workshops</li>
+                <li>📜 Certification Courses</li>
+                <li>⚠️ Safety Training</li>
+                <li>📊 Skill Assessments</li>
             </ul>
         </section>
 
         <section id="about" class="about">
             <h2>About Us</h2>
-            <p>SkillSync is your one-stop shop for all training needs in the manufacturing sector. Our mission is to empower employees with the skills necessary to thrive in a dynamic work environment. With years of experience and a team of expert trainers, we offer comprehensive training solutions tailored to your organization’s specific needs.</p>
+            <p>SkillSync is your ultimate partner for employee training in the manufacturing sector. Our mission is to empower your workforce with the skills needed to excel in a competitive landscape. With tailored programs and expert trainers, we help organizations build a stronger, safer, and more efficient workforce.</p>
         </section>
 
         <section id="testimonials" class="testimonials">
             <h2>Testimonials</h2>
-            <blockquote>
+            <div class="testimonial">
                 <p>"SkillSync transformed our workforce! The training programs were engaging and effective."</p>
                 <cite>- Jane Doe, Operations Manager</cite>
-            </blockquote>
-            <blockquote>
+            </div>
+            <div class="testimonial">
                 <p>"The online workshops were incredibly convenient and very informative!"</p>
                 <cite>- John Smith, Plant Supervisor</cite>
-            </blockquote>
+            </div>
         </section>
 
         <section id="contact" class="contact">
@@ -118,5 +180,3 @@
 </body>
 
 </html>
-
-
