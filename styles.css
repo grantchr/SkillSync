@@ -1,202 +1,26 @@
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    background-color: #FEFFFD; /* Ivory Whisper */
-    color: #1B263F; /* Keep Navy */
-    line-height: 1.6;
-}
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-/* Header Styling */
-header {
-    background-color: #204F56; /* Ocean Teal */
-    color: #E6FD53; /* Lemon Zest */
-    padding: 20px 0;
-    text-align: center;
-    border-radius: 0 0 20px 20px; /* Rounded bottom corners */
-}
+<body>
+    <header>
+        <img src="logo.png" alt="Your Company Logo" class="logo">
+        <h1>Manufacturing Training Hub</h1>
+        <p>Your one-stop platform for industrial equipment training</p>
+    </header>
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    text-transform: uppercase; /* Modern touch */
-    letter-spacing: 1px; /* Spacing for a cleaner look */
-}
+    <nav>
+        <div class="nav-section">
+            <h3><a href="#home">Home</a></h3>
+            <h3><a href="#about">About Us</a></h3>
+            <h3><a href="#trainings">Trainings</a></h3>
+        </div>
+        <div class="nav-section">
+            <h3><a href="#submit">Submit Training</a></h3>
+            <h3><a href="#contact">Contact</a></h3>
+        </div>
+    </nav>
+</body>
 
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Navigation Bar */
-nav {
-    background-color: #1B263F; /* Keep Navy */
-    text-align: center;
-    padding: 10px;
-}
-
-nav a {
-    color: #E6FD53; /* Lemon Zest */
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1em;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #204F56; /* Ocean Teal */
-}
-
-/* Sections */
-section {
-    padding: 40px;
-    background-color: #fff; /* White background for sections */
-    text-align: center;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px 0; /* Spacing between sections */
-}
-
-section h2 {
-    color: #204F56; /* Ocean Teal */
-    font-size: 2em;
-    margin-bottom: 20px;
-    position: relative; /* For bubble effect */
-}
-
-section h2::before, section h2::after {
-    content: '';
-    position: absolute;
-    background-color: #E6FD53; /* Lemon Zest */
-    border-radius: 50px; /* Rounded bubbles */
-    height: 100%; /* Full height */
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Behind the text */
-    filter: blur(20px); /* Blur effect */
-}
-
-/* Paragraphs */
-section p {
-    color: #333; /* Dark Gray */
-    font-size: 1.2em;
-    max-width: 800px;
-    margin: 0 auto 30px;
-    padding: 10px 20px; /* Add padding for bubble effect */
-    background-color: #E6FD53; /* Lemon Zest */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* CTA Button */
-.cta-button {
-    background-color: #E6FD53; /* Lemon Zest */
-    color: #1B263F; /* Keep Navy */
-    padding: 12px 25px;
-    border: none;
-    border-radius: 20px; /* More rounded button */
-    cursor: pointer;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #204F56; /* Ocean Teal */
-}
-
-/* Cards */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background-color: white; /* White background for cards */
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 20px;
-    text-align: left;
-}
-
-.card h3 {
-    color: #204F56; /* Ocean Teal */
-    font-size: 1.4em;
-    margin-bottom: 10px; /* Spacing below card titles */
-}
-
-.card p {
-    color: #555; /* Darker gray for card text */
-}
-
-.card button {
-    background-color: #007bff; /* Default button color */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-}
-
-.card button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
-
-/* Form */
-.form-container {
-    background-color: #9EB8F9; /* Sky Mist */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-input, textarea, label {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-input:focus, textarea:focus {
-    border-color: #204F56; /* Ocean Teal */
-    outline: none;
-}
-
-.submit-button {
-    background-color: #28a745; /* Green */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.submit-button:hover {
-    background-color: #218838; /* Darker green */
-}
-
-/* Footer */
-footer {
-    background-color: #1B263F; /* Keep Navy */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-footer p {
-    margin: 0;
-}
 
