@@ -85,6 +85,19 @@
             margin: 0 auto 30px;
         }
 
+        /* Bubbles for sections */
+        .bubble {
+            background-color: #E6FD53; /* Lemon Zest */
+            border-radius: 20px; /* Rounded bubbles */
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            transition: transform 0.3s; /* Smooth transition */
+        }
+
+        .bubble:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
         /* CTA Button */
         .cta-button {
             background-color: #E6FD53; /* Lemon Zest */
@@ -225,19 +238,19 @@
     </section>
 
     <div class="section-container">
-        <section id="about">
+        <section id="about" class="bubble">
             <h2>About Us</h2>
             <p>SkillSync is a centralized platform where companies submit their specialized equipment training. We provide the latest and most accurate resources to train your workforce efficiently and safely on the machinery that drives your business.</p>
         </section>
 
-        <section id="services">
+        <section id="services" class="bubble">
             <h2>Our Services</h2>
             <p>We offer tailored training solutions, online courses, and certifications to meet the specific needs of your workforce. Our expert instructors are industry veterans with hands-on experience.</p>
         </section>
 
-        <section id="industries">
+        <section id="industries" class="bubble">
             <h2>Industries We Serve</h2>
-            <p>From manufacturing to logistics, we cater to various industries including automotive, aerospace, and construction. Our training programs are designed to meet the unique demands of each sector.</p>
+            <p>From manufacturing to logistics, we cater to various industries including automotive, aerospace, and construction. Our programs are designed to meet industry standards and ensure compliance.</p>
         </section>
     </div>
 
@@ -299,4 +312,5 @@
 </body>
 
 </html>
+
 
