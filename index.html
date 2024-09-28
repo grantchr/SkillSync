@@ -19,41 +19,33 @@
 
         /* Header Styling */
         header {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            padding: 20px 0;
             background-color: #204F56; /* Ocean Teal */
             color: #E6FD53; /* Lemon Zest */
-            padding: 20px 0;
-            text-align: center;
             border-radius: 0 0 20px 20px; /* Rounded bottom corners */
         }
 
         header h1 {
             font-family: 'Montserrat', sans-serif; /* Stylish font */
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em; /* Larger font size */
             text-transform: uppercase; /* Modern touch */
             letter-spacing: 1px; /* Spacing for a cleaner look */
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: #1B263F; /* Keep Navy */
-            text-align: center;
-            padding: 20px 0;
+            flex: 1; /* Allow heading to take full width */
+            text-align: left; /* Align text to the left */
         }
 
         .nav-section {
-            margin-bottom: 20px; /* Space between nav items */
+            display: flex;
+            gap: 20px; /* Space between nav items */
+            margin-left: auto; /* Push nav to the right */
         }
 
         nav a {
             color: #E6FD53; /* Lemon Zest for text */
             text-decoration: none;
-            margin: 0 15px;
             font-size: 1.1em;
             transition: color 0.3s;
         }
@@ -204,20 +196,18 @@
 <body>
     <header>
         <h1>SkillSync</h1>
-        <p>Your one-stop platform for industrial equipment training</p>
+        <nav>
+            <div class="nav-section">
+                <h3><a href="#home">Home</a></h3>
+                <h3><a href="#about">About Us</a></h3>
+                <h3><a href="#trainings">Trainings</a></h3>
+                <h3><a href="#services">Our Services</a></h3>
+                <h3><a href="#industries">Industries We Serve</a></h3>
+                <h3><a href="#submit">Submit Training</a></h3>
+                <h3><a href="#contact">Contact</a></h3>
+            </div>
+        </nav>
     </header>
-
-    <nav>
-        <div class="nav-section">
-            <h3><a href="#home">Home</a></h3>
-            <h3><a href="#about">About Us</a></h3>
-            <h3><a href="#trainings">Trainings</a></h3>
-            <h3><a href="#services">Our Services</a></h3>
-            <h3><a href="#industries">Industries We Serve</a></h3>
-            <h3><a href="#submit">Submit Training</a></h3>
-            <h3><a href="#contact">Contact</a></h3>
-        </div>
-    </nav>
 
     <section id="home">
         <h2>Welcome to SkillSync</h2>
