@@ -4,32 +4,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SkillSync Training Hub - A centralized platform for companies to submit and employees to access equipment-specific training.">
-    <title>SkillSync Training Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Manufacturing Training Hub - A centralized platform for companies to submit and employees to access equipment-specific training.">
+    <title>Manufacturing Training Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #FEFFFD; /* Ivory Whisper */
+            color: #1B263F; /* Keep Navy */
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #204F56; /* Ocean Teal */
+            color: #E6FD53; /* Lemon Zest */
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif; /* Stylish font */
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase; /* Modern touch */
+            letter-spacing: 1px; /* Spacing for a cleaner look */
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1B263F; /* Keep Navy */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center; /* Center align the bubbles */
+            margin-bottom: 20px; /* Space between bubbles and other nav items */
+        }
+
+        .nav-bubble {
+            background-color: #E6FD53; /* Lemon Zest */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Space inside the bubble */
+            margin: 0 15px; /* Space between bubbles */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            transition: transform 0.3s, background-color 0.3s; /* Animation effects */
+        }
+
+        .nav-bubble:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            background-color: #204F56; /* Ocean Teal on hover */
+        }
+
+        .nav-bubble h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        nav a {
+            color: #1B263F; /* Keep Navy for text */
+            text-decoration: none;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px;
+            background-color: #fff; /* White background for sections */
+            text-align: center;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            margin: 20px 0; /* Spacing between sections */
+        }
+
+        section h2 {
+            color: #204F56; /* Ocean Teal */
+            font-size: 2em;
+            margin-bottom: 20px;
+            position: relative; /* For bubble effect */
+        }
+
+        section h2::before,
+        section h2::after {
+            content: '';
+            position: absolute;
+            background-color: #E6FD53; /* Lemon Zest */
+            border-radius: 50px; /* Rounded bubbles */
+            height: 100%; /* Full height */
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Behind the text */
+            filter: blur(20px); /* Blur effect */
+        }
+
+        /* Paragraphs */
+        section p {
+            color: #333; /* Dark Gray */
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 10px 20px; /* Add padding for bubble effect */
+            background-color: #E6FD53; /* Lemon Zest */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background-color: #E6FD53; /* Lemon Zest */
+            color: #1B263F; /* Keep Navy */
+            padding: 12px 25px;
+            border: none;
+            border-radius: 20px; /* More rounded button */
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #204F56; /* Ocean Teal */
+        }
+
+        /* Cards */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white; /* White background for cards */
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .card h3 {
+            color: #204F56; /* Ocean Teal */
+            font-size: 1.4em;
+            margin-bottom: 10px; /* Spacing below card titles */
+        }
+
+        .card p {
+            color: #555; /* Darker gray for card text */
+        }
+
+        .card button {
+            background-color: #007bff; /* Default button color */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        /* Form */
+        .form-container {
+            background-color: #9EB8F9; /* Sky Mist */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        input,
+        textarea,
+        label {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #204F56; /* Ocean Teal */
+            outline: none;
+        }
+
+        .submit-button {
+            background-color: #28a745; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .submit-button:hover {
+            background-color: #218838; /* Darker green */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1B263F; /* Keep Navy */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <img src="Desktop\InnovationPrizeF24-SKILLSYNC.png" alt="C:\Users\iog919\Downloads\InnovationPrizeF24-SKILLSYNC.png" />
-        </div>
-        <h1>SkillSync Training Hub</h1>
+        <img src="https://ibb.co/VJvg1yb" alt="Your Company Logo" class="logo">
+        <h1>Manufacturing Training Hub</h1>
         <p>Your one-stop platform for industrial equipment training</p>
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#trainings">Trainings</a>
-        <a href="#submit">Submit Training</a>
-        <a href="#contact">Contact</a>
+        <div class="nav-container">
+            <div class="nav-bubble">
+                <h3><a href="#home">Home</a></h3>
+            </div>
+            <div class="nav-bubble">
+                <h3><a href="#about">About Us</a></h3>
+            </div>
+            <div class="nav-bubble">
+                <h3><a href="#trainings">Trainings</a></h3>
+            </div>
+        </div>
+        <div class="nav-section">
+            <h3><a href="#submit">Submit Training</a></h3>
+            <h3><a href="#contact">Contact</a></h3>
+        </div>
     </nav>
 
     <section id="home">
-        <h2>Welcome to SkillSync Training Hub</h2>
+        <h2>Welcome to Manufacturing Training Hub</h2>
         <p>Empower your workforce with the latest and most accurate training for your industrial equipment. Browse our library of specialized training modules for various manufacturing processes and machines.</p>
         <button class="cta-button">Browse Trainings</button>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Manufacturing Training Hub is a centralized platform where companies submit their specialized equipment training. We provide the latest and most accurate resources to train your workforce efficiently and safely on the machinery that drives your business.</p>
     </section>
 
     <section id="trainings">
@@ -77,26 +316,11 @@
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Manufacturing Training Hub is a centralized platform where companies submit their specialized equipment training. We provide the latest and most accurate resources to train your workforce efficiently and safely on the machinery that drives your business.</p>
-    </section>
-
     <section id="contact">
         <h2>Contact Us</h2>
         <p>If you have any questions or need help, feel free to reach out!</p>
         <p>Email: support@manuhub.com</p>
         <p>Phone: 1-800-555-TRAIN</p>
-    </section>
-
-    <section id="affiliates">
-        <h2>Our Affiliates</h2>
-        <div class="affiliate-logos">
-            <img src="path/to/affiliate1.png" alt="Affiliate 1" />
-            <img src="path/to/affiliate2.png" alt="Affiliate 2" />
-            <img src="path/to/affiliate3.png" alt="Affiliate 3" />
-            <!-- Add more affiliate logos as needed -->
-        </div>
     </section>
 
     <footer>
@@ -105,3 +329,4 @@
 </body>
 
 </html>
+
